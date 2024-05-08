@@ -1,0 +1,15 @@
+---
+- name: Playbook - Challenge_0508
+  hosts: planetexpress
+  connection: ssh  
+  gather_facts: no
+
+  tasks:
+  - name: gather_facts
+    ansible.builtin.gather_facts:
+      register: facts
+
+  - name: Display facts
+    debug:
+      msg: "{{ facts }}"
+
